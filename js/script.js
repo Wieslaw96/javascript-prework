@@ -41,7 +41,6 @@ if (computerMove == "kamień" && playerMove == "papier") {
 	printMessage("Ty wygrywasz!");
 } else if (computerMove == "nożyce" && playerMove == "papier") {
 	printMessage("Komputer wygrywa!");
-}
-if (computerMove == playerMove) {
+} else if (computerMove == playerMove) {
 	printMessage("Remis");
 }
