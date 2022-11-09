@@ -12,19 +12,19 @@ function getMoveName(argMoveId) {
 }
 function displayResult(argComputerMove, argPlayerMove) {
 	if (argComputerMove == "kamień" && argPlayerMove == "papier") {
-		return "Ty wygrywasz!";
+		printMessage("Ty wygrywasz!");
 	} else if (argComputerMove == "kamień" && argPlayerMove == "nożyce") {
-		return "Komputer wygrywa!";
+		printMessage("Komputer wygrywa!");
 	} else if (argComputerMove == "papier" && argPlayerMove == "nożyce") {
-		return "Ty wygrywasz!";
+		printMessage("Ty wygrywasz!");
 	} else if (argComputerMove == "papier" && argPlayerMove == "kamień") {
-		return "Komputer wygrywa!";
+		printMessage("Komputer wygrywa!");
 	} else if (argComputerMove == "nożyce" && argPlayerMove == "kamień") {
-		return "Ty wygrywasz!";
+		printMessage("Ty wygrywasz!");
 	} else if (argComputerMove == "nożyce" && argPlayerMove == "papier") {
-		return "Komputer wygrywa!";
+		printMessage("Komputer wygrywa!");
 	} else if (argComputerMove == argPlayerMove) {
-		return "Remis";
+		printMessage("Remis");
 	}
 }
 
@@ -44,6 +44,4 @@ let playerMove = getMoveName(playerInput);
 
 printMessage("Twój ruch to: " + playerMove);
 
-let result = displayResult();
-
-printMessage("Wynik: " + result);
+displayResult(computerMove, playerMove);
